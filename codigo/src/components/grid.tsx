@@ -1,25 +1,20 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { motion } from "motion/react"
 
 interface Frame {
   id: number
   video: string
-  defaultPos: { x: number; y: number; w: number; h: number }
-  corner: string
-  edgeHorizontal: string
-  edgeVertical: string
-  mediaSize: number
-  borderThickness: number
-  borderSize: number
-  isHovered: boolean
+  corner?: string
+  edgeHorizontal?: string
+  edgeVertical?: string
+  mediaSize?: number
+  borderThickness?: number
+  borderSize?: number
 }
 
 interface FrameComponentProps {
   video: string
-  width: number | string
-  height: number | string
   className?: string
   corner: string
   edgeHorizontal: string
@@ -28,13 +23,12 @@ interface FrameComponentProps {
   borderThickness: number
   borderSize: number
   showFrame: boolean
-  isHovered: boolean
+  isActive: boolean
+  autoplayVisible: boolean
 }
 
 function FrameComponent({
   video,
-  width,
-  height,
   className = "",
   corner,
   edgeHorizontal,
@@ -43,28 +37,41 @@ function FrameComponent({
   borderThickness,
   borderSize,
   showFrame,
-  isHovered,
+  isActive,
+  autoplayVisible,
 }: FrameComponentProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [inView, setInView] = useState(false)
+  const [everVisible, setEverVisible] = useState(false)
 
   useEffect(() => {
-    if (isHovered) {
-      videoRef.current?.play()
+    const el = containerRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting)
+        if (entry.isIntersecting) setEverVisible(true)
+      },
+      { threshold: 0.35 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const el = videoRef.current
+    if (!el) return
+    if (inView && (isActive || autoplayVisible)) {
+      el.play().catch(() => {})
     } else {
-      videoRef.current?.pause()
+      el.pause()
     }
-  }, [isHovered])
+  }, [inView, isActive, autoplayVisible])
 
   return (
-    <div
-      className={`relative ${className}`}
-      style={{
-        width,
-        height,
-        transition: "width 0.3s ease-in-out, height 0.3s ease-in-out",
-      }}
-    >
-      <div className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className={`relative h-full w-full ${className}`}>
+      <div className="relative h-full w-full overflow-hidden">
         <div
           className="absolute inset-0 flex items-center justify-center"
           style={{
@@ -78,7 +85,7 @@ function FrameComponent({
           }}
         >
           <div
-            className="w-full h-full overflow-hidden"
+            className="h-full w-full overflow-hidden"
             style={{
               transform: `scale(${mediaSize})`,
               transformOrigin: "center",
@@ -86,11 +93,12 @@ function FrameComponent({
             }}
           >
             <video
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
               src={video}
               loop
               muted
               playsInline
+              preload={autoplayVisible && !everVisible ? "none" : "metadata"}
               ref={videoRef}
             />
           </div>
@@ -99,24 +107,24 @@ function FrameComponent({
         {showFrame && (
           <div className="absolute inset-0" style={{ zIndex: 2 }}>
             <div
-              className="absolute top-0 left-0 w-16 h-16 bg-contain bg-no-repeat"
+              className="absolute top-0 left-0 h-16 w-16 bg-contain bg-no-repeat"
               style={{ backgroundImage: `url(${corner})` }}
             />
             <div
-              className="absolute top-0 right-0 w-16 h-16 bg-contain bg-no-repeat"
+              className="absolute top-0 right-0 h-16 w-16 bg-contain bg-no-repeat"
               style={{ backgroundImage: `url(${corner})`, transform: "scaleX(-1)" }}
             />
             <div
-              className="absolute bottom-0 left-0 w-16 h-16 bg-contain bg-no-repeat"
+              className="absolute bottom-0 left-0 h-16 w-16 bg-contain bg-no-repeat"
               style={{ backgroundImage: `url(${corner})`, transform: "scaleY(-1)" }}
             />
             <div
-              className="absolute bottom-0 right-0 w-16 h-16 bg-contain bg-no-repeat"
+              className="absolute right-0 bottom-0 h-16 w-16 bg-contain bg-no-repeat"
               style={{ backgroundImage: `url(${corner})`, transform: "scale(-1, -1)" }}
             />
 
             <div
-              className="absolute top-0 left-16 right-16 h-16"
+              className="absolute top-0 right-16 left-16 h-16"
               style={{
                 backgroundImage: `url(${edgeHorizontal})`,
                 backgroundSize: "auto 64px",
@@ -124,7 +132,7 @@ function FrameComponent({
               }}
             />
             <div
-              className="absolute bottom-0 left-16 right-16 h-16"
+              className="absolute right-16 bottom-0 left-16 h-16"
               style={{
                 backgroundImage: `url(${edgeHorizontal})`,
                 backgroundSize: "auto 64px",
@@ -133,7 +141,7 @@ function FrameComponent({
               }}
             />
             <div
-              className="absolute left-0 top-16 bottom-16 w-16"
+              className="absolute top-16 bottom-16 left-0 w-16"
               style={{
                 backgroundImage: `url(${edgeVertical})`,
                 backgroundSize: "64px auto",
@@ -141,7 +149,7 @@ function FrameComponent({
               }}
             />
             <div
-              className="absolute right-0 top-16 bottom-16 w-16"
+              className="absolute top-16 right-0 bottom-16 w-16"
               style={{
                 backgroundImage: `url(${edgeVertical})`,
                 backgroundSize: "64px auto",
@@ -164,80 +172,104 @@ interface DynamicFrameLayoutProps {
   gapSize?: number
 }
 
-export function DynamicFrameLayout({ 
-  frames: initialFrames, 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia("(max-width: 767px)").matches,
+  )
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)")
+    const onChange = (event: MediaQueryListEvent) => setIsMobile(event.matches)
+    mq.addEventListener("change", onChange)
+    return () => mq.removeEventListener("change", onChange)
+  }, [])
+
+  return isMobile
+}
+
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(
+    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  )
+
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
+    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches)
+    mq.addEventListener("change", onChange)
+    return () => mq.removeEventListener("change", onChange)
+  }, [])
+
+  return reduced
+}
+
+export function DynamicFrameLayout({
+  frames,
   className,
   showFrames = false,
-  hoverSize = 6,
-  gapSize = 4
+  hoverSize = 7,
+  gapSize = 4,
 }: DynamicFrameLayoutProps) {
-  const [frames] = useState<Frame[]>(initialFrames)
-  const [hovered, setHovered] = useState<{ row: number; col: number } | null>(null)
+  const isMobile = useIsMobile()
+  const reduceMotion = usePrefersReducedMotion()
+  const [hoverState, setHoverState] = useState<{ mode: boolean; index: number } | null>(null)
+  const hovered = hoverState !== null && hoverState.mode === isMobile ? hoverState.index : null
 
-  const getRowSizes = () => {
-    if (hovered === null) return "4fr 4fr 4fr"
-    const { row } = hovered
-    const nonHoveredSize = (12 - hoverSize) / 2
-    return [0, 1, 2].map((r) => (r === row ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
-  }
-
-  const getColSizes = () => {
-    if (hovered === null) return "4fr 4fr 4fr"
-    const { col } = hovered
-    const nonHoveredSize = (12 - hoverSize) / 2
-    return [0, 1, 2].map((c) => (c === col ? `${hoverSize}fr` : `${nonHoveredSize}fr`)).join(" ")
-  }
-
-  const getTransformOrigin = (x: number, y: number) => {
-    const vertical = y === 0 ? "top" : y === 4 ? "center" : "bottom"
-    const horizontal = x === 0 ? "left" : x === 4 ? "center" : "right"
-    return `${vertical} ${horizontal}`
+  const trackSizes = (active: number | null) => {
+    if (active === null) return "1fr 1fr"
+    return [0, 1]
+      .map((i) => (i === active ? `${hoverSize}fr` : `${12 - hoverSize}fr`))
+      .join(" ")
   }
 
   return (
     <div
-      className={`relative w-full h-full ${className}`}
-      style={{
-        display: "grid",
-        gridTemplateRows: getRowSizes(),
-        gridTemplateColumns: getColSizes(),
-        gap: `${gapSize}px`,
-        transition: "grid-template-rows 0.4s ease, grid-template-columns 0.4s ease",
-      }}
+      className={`relative ${className ?? ""}`}
+      style={
+        isMobile
+          ? {
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gridAutoRows: "auto",
+              gap: `${gapSize}px`,
+            }
+          : {
+              display: "grid",
+              gridTemplateRows: trackSizes(hovered === null ? null : Math.floor(hovered / 2)),
+              gridTemplateColumns: trackSizes(hovered === null ? null : hovered % 2),
+              gap: `${gapSize}px`,
+              transition:
+                reduceMotion
+                  ? "none"
+                  : "grid-template-rows 0.4s ease, grid-template-columns 0.4s ease",
+            }
+      }
     >
-      {frames.map((frame) => {
-        const row = Math.floor(frame.defaultPos.y / 4)
-        const col = Math.floor(frame.defaultPos.x / 4)
-        const transformOrigin = getTransformOrigin(frame.defaultPos.x, frame.defaultPos.y)
-
-        return (
-          <motion.div
-            key={frame.id}
-            className="relative"
-            style={{
-              transformOrigin,
-              transition: "transform 0.4s ease",
-            }}
-            onMouseEnter={() => setHovered({ row, col })}
-            onMouseLeave={() => setHovered(null)}
-          >
-            <FrameComponent
-              video={frame.video}
-              width="100%"
-              height="100%"
-              className="absolute inset-0"
-              corner={frame.corner}
-              edgeHorizontal={frame.edgeHorizontal}
-              edgeVertical={frame.edgeVertical}
-              mediaSize={frame.mediaSize}
-              borderThickness={frame.borderThickness}
-              borderSize={frame.borderSize}
-              showFrame={showFrames}
-              isHovered={hovered?.row === row && hovered?.col === col}
-            />
-          </motion.div>
-        )
-      })}
+      {frames.map((frame, index) => (
+        <div
+          key={frame.id}
+          className={isMobile ? "relative aspect-square" : "relative"}
+          onMouseEnter={() => {
+            if (!isMobile) setHoverState({ mode: false, index })
+          }}
+          onMouseLeave={() => {
+            if (!isMobile) setHoverState(null)
+          }}
+        >
+          <FrameComponent
+            video={frame.video}
+            className="absolute inset-0"
+            corner={frame.corner ?? ""}
+            edgeHorizontal={frame.edgeHorizontal ?? ""}
+            edgeVertical={frame.edgeVertical ?? ""}
+            mediaSize={frame.mediaSize ?? 1}
+            borderThickness={frame.borderThickness ?? 0}
+            borderSize={frame.borderSize ?? 100}
+            showFrame={showFrames}
+            isActive={!isMobile && hovered === index}
+            autoplayVisible={isMobile}
+          />
+        </div>
+      ))}
     </div>
   )
 }
