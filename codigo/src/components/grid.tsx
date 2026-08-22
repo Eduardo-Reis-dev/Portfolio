@@ -1,10 +1,13 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 
 interface Frame {
   id: number
   video: string
+  to?: string
+  label?: string
   corner?: string
   edgeHorizontal?: string
   edgeVertical?: string
@@ -244,17 +247,17 @@ export function DynamicFrameLayout({
             }
       }
     >
-      {frames.map((frame, index) => (
-        <div
-          key={frame.id}
-          className={isMobile ? "relative aspect-square" : "relative"}
-          onMouseEnter={() => {
+      {frames.map((frame, index) => {
+        const cellProps = {
+          className: isMobile ? "relative aspect-square" : "relative",
+          onMouseEnter: () => {
             if (!isMobile) setHoverState({ mode: false, index })
-          }}
-          onMouseLeave={() => {
+          },
+          onMouseLeave: () => {
             if (!isMobile) setHoverState(null)
-          }}
-        >
+          },
+        }
+        const cell = (
           <FrameComponent
             video={frame.video}
             className="absolute inset-0"
@@ -268,8 +271,23 @@ export function DynamicFrameLayout({
             isActive={!isMobile && hovered === index}
             autoplayVisible={isMobile}
           />
-        </div>
-      ))}
+        )
+
+        return frame.to ? (
+          <Link
+            key={frame.id}
+            {...cellProps}
+            to={frame.to}
+            aria-label={frame.label ?? frame.to}
+          >
+            {cell}
+          </Link>
+        ) : (
+          <div key={frame.id} {...cellProps}>
+            {cell}
+          </div>
+        )
+      })}
     </div>
   )
 }

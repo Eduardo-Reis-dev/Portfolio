@@ -6,18 +6,26 @@ const demoFrames = [
   {
     id: 1,
     video: "https://static.cdn-luma.com/files/981e483f71aa764b/Company%20Thing%20Exported.mp4",
+    to: "/sobre-mim",
+    label: "Sobre mim",
   },
   {
     id: 2,
     video: "https://static.cdn-luma.com/files/58ab7363888153e3/WebGL%20Exported%20(1).mp4",
+    to: "/experiencia",
+    label: "Experiência",
   },
   {
     id: 3,
     video: "https://static.cdn-luma.com/files/58ab7363888153e3/Jitter%20Exported%20Poster.mp4",
+    to: "/projetos",
+    label: "Projetos",
   },
   {
     id: 4,
     video: "https://static.cdn-luma.com/files/58ab7363888153e3/Exported%20Web%20Video.mp4",
+    to: "/contatos",
+    label: "Contatos",
   },
 ]
 
