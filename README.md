@@ -7,6 +7,7 @@ Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar m
 - **React**
 - **Next.js**
 - **TypeScript**
+- **Tailwind**
 
 ## 📁 Estrutura de Diretórios
 
@@ -39,6 +40,24 @@ Siga os passos abaixo para rodar o projeto localmente:
    ```
 
 5. Abra [http://localhost:3000](http://localhost:3000) no navegador para visualizar.
+
+## 🖼️ Wireframes
+Para este projeto foram desenvolvidos alguns wireframes de média fidelidade para viabilizar a estruturação das interfaces
+
+- Homepage
+<img src='./wireframes/home.png'>
+
+- Projetos
+<img src='./wireframes/projetos.png'>
+
+- Contatos
+<img src='./wireframes/contatos.png'>
+
+- Experiencia
+<img src='./wireframes/experiencia.png'>
+
+- Sobre Mim
+<img src='./wireframes/sobre-mim.png'>
 
 ## 🌐 Acesso Online
 
