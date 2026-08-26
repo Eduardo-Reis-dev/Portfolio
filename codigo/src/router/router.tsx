@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { DemoPage } from '../pages/homepage'
-import { Projetos } from '../pages/projetos'
-import { Experiencia } from '../pages/experiencia'
-import { SobreMim } from '../pages/sobre-mim'
-import { Contatos } from '../pages/contatos'
+import { DemoPage } from '../pages/homepage/homepage'
+import { Projetos } from '../pages/projetos/projetos'
+import { Experiencia } from '../pages/experiencia/experiencia'
+import { SobreMim } from '../pages/sobre/sobre-mim'
+import { Contatos } from '../pages/contatos/contatos'
 import { NaoEncontrada } from '../pages/nao-encontrada'
 
 export const router = createBrowserRouter([

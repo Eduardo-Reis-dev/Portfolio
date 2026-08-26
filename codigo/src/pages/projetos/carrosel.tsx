@@ -1,15 +1,3 @@
-"use client"
-
-// A full-bleed editorial hero driven by a filmstrip.
-//
-// Every card shares one top edge. The focused card unfurls to full height while
-// its neighbours stay clipped to half, so the strip reads as a row of cropped
-// heads with one complete portrait standing in the middle of it. Changing the
-// focus re-grades the whole background to that image.
-//
-// Geometry is measured, never hard-coded: one ResizeObserver reads the stage and
-// every size below is a ratio of it, so the same component is pixel-identical in
-// a 600px preview box and on a 4K display.
 import * as React from "react"
 import {
   AnimatePresence,
@@ -17,7 +5,7 @@ import {
   motion,
   useMotionValue,
   useReducedMotion,
-} from "framer-motion"
+} from "motion/react"
 
 import { cn } from "@/lib/utils"
 
