@@ -19,7 +19,7 @@ export function Marquee({
   return (
     <div 
       className={cn(
-        "w-full overflow-hidden sm:mt-24 mt-10 z-10",
+        "w-full overflow-hidden z-10",
         className
       )} 
       {...props}
@@ -41,10 +41,7 @@ export function Marquee({
   )
 }
 
-/*
-import { Marquee } from "@/components/ui/marquee"
-
-const Logos = {
+export const Logos = {
   tailwindcss: () => (
     <svg
       className={"h-[28px] sm:w-auto w-[140px]"}
@@ -146,4 +143,3 @@ export function MarqueeDemo() {
     </Marquee>
   )
 }
-  */

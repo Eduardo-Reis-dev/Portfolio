@@ -1,5 +1,3 @@
-"use client"
-
 import { useTranslation } from "react-i18next"
 import { DynamicFrameLayout } from "./grid"
 
@@ -18,7 +16,7 @@ const videosByLang = {
   },
 } as const
 
-export function DemoPage() {
+export function Homepage() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language.startsWith("en") ? "en" : "pt"
   const videos = videosByLang[lang]
@@ -51,7 +49,7 @@ export function DemoPage() {
   ]
 
   return (
-    <div className="min-h-dvh w-full bg-zinc-900">
+    <div className="min-h-dvh w-full bg-zinc-950">
       <DynamicFrameLayout
         frames={demoFrames}
         className="w-full md:h-dvh"

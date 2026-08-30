@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
-import { DemoPage } from '../pages/homepage/homepage'
+import { Homepage } from '../pages/homepage/homepage'
 import { Projetos } from '../pages/projetos/projetos'
+import { ProjetoDetalhe } from '../pages/projetos/detalhes'
 import { Experiencia } from '../pages/experiencia/experiencia'
 import { SobreMim } from '../pages/sobre/sobre-mim'
 import { Contatos } from '../pages/contatos/contatos'
@@ -9,11 +10,14 @@ import { NaoEncontrada } from '../pages/nao-encontrada'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <DemoPage />,
+    element: <Homepage />,
   },
   {
     path: '/projetos',
-    element: <Projetos />,
+    children: [
+      { index: true, element: <Projetos /> },
+      { path: ':id', element: <ProjetoDetalhe /> },
+    ],
   },
   {
     path: '/experiencia',

@@ -1,43 +1,46 @@
-import {   
-  HeroCarousel,
-  type HeroCarouselItem,
-  } from "./carrosel";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { BackButton } from "@/components/back-button"
+import { CoverflowCarousel, type CoverflowSlide } from "./carrosel"
+import { PROJECTS } from "./data"
 
-const ART = (name: string) =>
-  `https://pub-45c4a3d9611041d08fe82d52599b72b0.r2.dev/primary-showcase-assets/${name}.jpg`
-
-const LOOKS: HeroCarouselItem[] = [
-  {
-    title: "Red\nRibbon",
-    image: ART("red-ribbon-typography"),
-    credit: "BY CASA SOLARA.",
-    meta: ["FRI NOV 21", "6-9 PM", "LISBON"],
-    accent: "#e5231b",
-  },
-  {
-    title: "Celestial\nLight",
-    image: ART("celestial-light-figure"),
-    credit: "BY AURELIA STUDIO.",
-    meta: ["SAT NOV 22", "5-10 PM", "MIAMI"],
-    accent: "#2f7bff",
-  },
-  {
-    title: "Neon\nUplight",
-    image: ART("neon-portrait-uplight"),
-    credit: "BY ATELIER SUD.",
-    meta: ["SUN NOV 23", "4-8 PM", "MARRAKECH"],
-    accent: "#ff2f9c",
-  },
-]
+const SLIDES: CoverflowSlide[] = PROJECTS.map((p) => ({
+  src: p.logo,
+  alt: p.title.replace("\n", " "),
+  title: p.title,
+  subtitle: p.credit,
+  meta: p.meta?.map((m) => ({ label: "", value: m })),
+}))
 
 export function Projetos() {
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState(0)
+  const active = SLIDES[activeIndex]
+
   return (
-    <HeroCarousel
-      items={LOOKS}
-      defaultIndex={4}
-      brand="MONTRA"
-      onBack={() => {}}
-      onMenu={() => {}}
-    />
+    <div className="relative min-h-screen w-full flex items-center bg-zinc-950 overflow-hidden">
+      <BackButton />
+      <div className="w-full max-w-6xl mx-auto px-6 flex flex-col gap-8">
+        {active && (
+          <div className="flex flex-col gap-2">
+            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-zinc-50 whitespace-pre-line">
+              {active.title}
+            </h1>
+            {active.subtitle && (
+              <p className="text-sm text-zinc-400 font-mono uppercase tracking-widest">
+                {active.subtitle}
+              </p>
+            )}
+          </div>
+        )}
+        <CoverflowCarousel
+          slides={SLIDES}
+          showCaption
+          showNavigation
+          onActiveChange={setActiveIndex}
+          onSlideClick={(i) => navigate(`/projetos/${PROJECTS[i].id}`)}
+        />
+      </div>
+    </div>
   )
 }
