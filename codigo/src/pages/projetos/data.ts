@@ -2,7 +2,7 @@ export interface Project {
   id: string
   title: string
   logo: string
-  image: string
+  demo: string
   description: string
   contributions: string[]
   techStack: string[]
@@ -13,15 +13,12 @@ export interface Project {
   meta?: string[]
 }
 
-const ART = (name: string) =>
-  `https://pub-45c4a3d9611041d08fe82d52599b72b0.r2.dev/primary-showcase-assets/${name}.jpg`
-
 export const PROJECTS: Project[] = [
   {
     id: "modus",
     title: "MODUS",
     logo: "/projetos/modus/modus-logo.png",
-    image: "/projetos/modus/demonstracao.gif",
+    demo: "/projetos/modus/demonstracao.mp4",
     description:
       "O Modus é um sistema de gestão de projetos arquitetônicos desenvolvido para escritórios que conduzem múltiplos projetos simultaneamente. Seu objetivo é centralizar e organizar as informações das atividades, respeitando a sequência metodológica do processo de elaboração arquitetônica.",
     contributions: [
@@ -36,17 +33,17 @@ export const PROJECTS: Project[] = [
     ],
     gallery: [
       "/projetos/modus/tarefas.png",
+      "/projetos/modus/home.png",
       "/projetos/modus/budget.png",
       "/projetos/modus/equipe.png",
-      "/projetos/modus/email.png",
+      "/projetos/modus/email.png",  
       "/projetos/modus/indicadores.png",
       "/projetos/modus/logs.png",
       "/projetos/modus/clientes.png",
       "/projetos/modus/projetos.png",
-      "/projetos/modus/home.png",
-      "/projetos/modus/ile.png",
+      "/projetos/modus/file.png",
     ],
-    credit: "Para Escritorio X",
+    credit: "GERENCIAMENTO DE PROJETOS",
     meta: ["FEV 2026 - AGOSTO 2026", "DURAÇÃO DE 7 MESES", "BELO HORIZONTE"],
     
   },
@@ -54,9 +51,9 @@ export const PROJECTS: Project[] = [
     id: "cras-digital",
     title: "Cras Digital",
     logo: "/projetos/cras/cras.png",
-    image: ART("celestial-light-figure"),
+    demo: "/projetos/cras/demonstracao.mp4",
     description:
-      "An interactive art installation exploring the interplay of light and shadow through digital projection.",
+      "Um software voltado à digitalização e automação dos processos operacionais realizados nas unidades do Centro de Referência de Assistência Social (CRAS). O sistema foi projetado para substituir procedimentos manuais, antes executados por meio de formulários físicos e registros em papel, por fluxos digitais seguros, padronizados e acessíveis.",
     contributions: [
       "Built the real-time projection mapping system",
       "Implemented sensor-driven interactivity",
@@ -68,22 +65,27 @@ export const PROJECTS: Project[] = [
       { label: "Live Demo", url: "#" },
     ],
     gallery: [
+      "/projetos/cras/unidades.png",
+      "/projetos/cras/servicos.png",
+      "/projetos/cras/dashboards.png",
       "/projetos/cras/agendamentos.png",
       "/projetos/cras/dados.png",
       "/projetos/cras/editar.png",
+      "/projetos/cras/empregos.png",
       "/projetos/cras/solicitacao.png",
       "/projetos/cras/solicitar.png",
-      "/projetos/cras/unidades.png",
+      "/projetos/cras/cadastro.png",
+      "/projetos/cras/perfil-beneficiario.png",
     ],
-    credit: "Para a instituição CRAS",
-    meta: ["AGO 2025 - DEZ 2026", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"],
+    credit: "AUTOMTIZAÇÃO DE PROCESSOS DO CRAS",
+    meta: ["AGO 2025 - DEZ 2025", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"],
     
   },
   {
     id: "rhsoft",
     title: "RHSoft",
     logo: "/projetos/rhsoft/logo.png",
-    image: ART("neon-portrait-uplight"),
+    demo: "/projetos/rhsoft/demonstracao.mp4",
     description:
       "O RHSoft é um sistema de Recursos Humanos desenvolvido com o objetivo de informatizar a gestão de recursos humanos em uma organização, centralizando dados de funcionários, automatizando cálculos da folha de pagamento e organizando a publicação de vagas de emprego.",
     contributions: [
@@ -108,8 +110,8 @@ export const PROJECTS: Project[] = [
       "/projetos/rhsoft/vaga.png",
       "/projetos/rhsoft/vagas.png",
     ],
-    credit: "BY ATELIER SUD.",
-    meta: ["SUN NOV 23", "4-8 PM", "MARRAKECH"],
+    credit: "AUTOMATIZAÇÃO DE PROCESSOS DE RH",
+    meta: ["AGO 2025 - DEZ 2025", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"],
     
   },
 ]
