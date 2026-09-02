@@ -12,35 +12,45 @@
     }
   },
   "projects": {
-    "modus": {
-      "credit": "PROJECT MANAGEMENT",
-      "description": "Modus is an architectural project management system developed for offices that run multiple projects simultaneously. Its goal is to centralize and organize activity information, respecting the methodological sequence of the architectural design process.",
+    "giro": {
+      "credit": "FINANCIAL MANAGEMENT PLATFORM",
+      "description": "GIRO is a financial management ecosystem designed for micro-entrepreneurs and freelancers to streamline income tracking, subscription management, and financial automation through mobile and web workflows.",
       "contributions": [
-        "Developed a project management system collaborating with a team of over 10 architects to elicit software requirements, mapping over 20 functional and 10 non-functional requirements",
-        "Enabled visual task tracking, centralizing data management for 10 architects, by building the system's main page in React.js and TypeScript with a Gantt chart library integration.",
-        "Standardized the development environment among the team's 7 developers, eliminating inconsistencies between local environments by structuring the application containers with Docker"
+        "Led product roadmap, business model, and monetization strategy through paid tiers and automated onboarding",
+        "Architected full-stack web and mobile application utilizing React, Supabase, PostgreSQL, and notification listeners",
+        "Engineered automated financial entry pipelines via WhatsApp webhooks and background processing"
       ],
-      "meta": ["FEB 2026 - AUGUST 2026", "DURATION OF 7 MONTHS", "BELO HORIZONTE"]
+      "meta": ["MAY 2026 - PRESENT", "ACTIVE PRODUCT", "BELO HORIZONTE"]
     },
-    "cras-digital": {
-      "credit": "CRAS PROCESS AUTOMATION",
-      "description": "Software aimed at digitizing and automating the operational processes carried out in the units of the Social Assistance Reference Center (CRAS). The system was designed to replace manual procedures, previously carried out through physical forms and paper records, with secure, standardized and accessible digital workflows.",
+    "avila-incorporadora": {
+      "credit": "REAL ESTATE SHOWCASE & ADMIN",
+      "description": "Custom real estate platform designed for Ávila Incorporadora to showcase developments, manage property listings, and provide administrative control over client leads and portfolio updates.",
       "contributions": [
-        "Built the real-time projection mapping system",
-        "Implemented sensor-driven interactivity",
-        "Optimized performance for large-scale display"
+        "Architected complete frontend experience emphasizing responsiveness, brand aesthetics, and modern transitions",
+        "Built modular administrative dashboard in React, Tailwind CSS, and Framer Motion for rapid listing updates",
+        "Structured performant client showcase pages with optimized media delivery and lead conversion focus"
       ],
-      "meta": ["AUG 2025 - DEC 2025", "DURATION OF 5 MONTHS", "BELO HORIZONTE"]
+      "meta": ["APR 2026", "COMMERCIAL PROJECT", "BELO HORIZONTE"]
     },
-    "rhsoft": {
-      "credit": "HR PROCESS AUTOMATION",
-      "description": "RHSoft is a Human Resources system developed with the aim of computerizing HR management in an organization, centralizing employee data, automating payroll calculations and organizing the posting of job vacancies.",
+    "aero-jr": {
+      "credit": "INSTITUTIONAL PORTAL & CMS",
+      "description": "Official web portal and custom content management platform built for the UFMG Aerospace Engineering program and Aero Jr., providing full control over academic news, faculty information, and course curricula.",
       "contributions": [
-        "Directed the lighting setup and photography",
-        "Developed custom post-processing pipelines",
-        "Created the exhibition web gallery"
+        "Engineered custom administrative dashboard modules (AdminNoticias and AdminSobreCurso) with live preview support",
+        "Developed structured component hierarchy ensuring compliance with university institutional design standards",
+        "Integrated dynamic state management for seamless news publishing and course outline curation"
       ],
-      "meta": ["AUG 2025 - DEC 2025", "DURATION OF 5 MONTHS", "BELO HORIZONTE"]
+      "meta": ["APR 2026 - MAY 2026", "ACADEMIC & COMMUNITY", "BELO HORIZONTE"]
+    },
+    "acessibee": {
+      "credit": "DIGITAL ACCESSIBILITY INITIATIVE",
+      "description": "An accessibility-focused digital solution dedicated to removing communication and navigation barriers for people with disabilities across interactive web environments.",
+      "contributions": [
+        "Coordinated requirements elicitation focusing on WCAG standards, keyboard navigation, and high-contrast usability",
+        "Implemented accessible React components with semantic HTML and comprehensive ARIA attribute coverage",
+        "Conducted end-to-end usability validation ensuring compliance across varied assistive technologies"
+      ],
+      "meta": ["JAN 2026 - MAR 2026", "SOCIAL IMPACT", "BELO HORIZONTE"]
     }
   }
 }
