@@ -1,63 +1,47 @@
 # Portfólio Pessoal
 
-Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar meus projetos, habilidades e informações de contato. Acesse em: link...
+Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar projetos, trajetória profissional e canais de contato com suporte a múltiplos idiomas (PT/EN) e navegação adaptativa por perfil.
+
+Acesse a versão em produção: [portfolio-git-main-eduardoreisdevsoftware-2085s-projects.vercel.app](https://portfolio-git-main-eduardoreisdevsoftware-2085s-projects.vercel.app)
+
+---
 
 ## 🚀 Tecnologias Utilizadas
 
-- **React**
-- **Next.js**
+- **React 18**
+- **Vite**
 - **TypeScript**
-- **Tailwind**
+- **Tailwind CSS**
+- **Framer Motion** (animações e transições)
+- **Lucide React** (ícones)
+- **i18next / react-i18next** (internacionalização PT-BR / EN)
+- **React Router DOM** (roteamento SPA)
+
+---
 
 ## 📁 Estrutura de Diretórios
 
-```
-(em construção)
-```
-
-## ⚙️ Instalação e Execução Local
-
-Siga os passos abaixo para rodar o projeto localmente:
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git## 🌐 Acesso Online
-
-🔗 Ainda não publicado.
-   ```
-
-2. Acesse a pasta do projeto:
-   ```bash
-   cd seu-repositorio
-   ```
-
-3. Instale as dependências:
-   ```bash
-   npm install
-   ```
-
-4. Execute o projeto em ambiente de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-
-5. Abra [http://localhost:3000](http://localhost:3000) no navegador para visualizar.
-
-## 🖼️ Wireframes
-Para este projeto foram desenvolvidos alguns wireframes de média fidelidade para viabilizar a estruturação das interfaces
-
-- Homepage
-<img src='./wireframes/home.png'>
-
-- Projetos
-<img src='./wireframes/projetos.png'>
-
-- Contatos
-<img src='./wireframes/contatos.png'>
-
-- Experiencia
-<img src='./wireframes/experiencia.png'>
-
-- Sobre Mim
-<img src='./wireframes/sobre-mim.png'>
-
+```text
+codigo/
+├── public/
+│   ├── perfil/             # SVGs de seleção de perfil (recrutador, visitante, professor)
+│   ├── projetos/           # Ativos visuais e logos dos projetos (GIRO, Ávila, Aero, Acessibee)
+│   ├── eu.jpeg             # Foto de perfil
+│   └── java.png
+├── src/
+│   ├── components/         # Componentes compartilhados (botões, carrossel, seletores de perfil)
+│   ├── lib/                # Utilitários e helpers CSS
+│   ├── pages/
+│   │   ├── contatos/       # Página de contatos e redes sociais
+│   │   ├── experiencia/    # Linha do tempo interativa e textos localizados
+│   │   ├── homepage/       # Bento Grid responsivo com ordenação adaptativa por perfil
+│   │   ├── nao-encontrada/ # Rota 404 personalizada
+│   │   ├── projetos/       # Carrossel Coverflow e páginas dinâmicas de detalhamento
+│   │   ├── selecao/        # Tela inicial de triagem por perfil
+│   │   └── sobre/          # Bio, stack tecnológica e links rápidos
+│   ├── i18n/               # Configurações de internacionalização (PT/EN)
+│   ├── App.tsx             # Definição das rotas principais
+│   └── main.tsx            # Ponto de entrada da aplicação
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
