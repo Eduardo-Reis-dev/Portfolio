@@ -156,27 +156,27 @@ http://localhost:5173
 
 ## 🖼️ Wireframes
 
-Para auxiliar no planejamento e desenvolvimento da aplicação, foram desenvolvidos **wireframes de média fidelidade** para estruturar as principais interfaces do portfólio.
+Para auxiliar no planejamento e desenvolvimento da aplicação, foram desenvolvidos wireframes de média fidelidade para estruturar as principais interfaces do portfólio.
 
 ### Homepage
 
-![Wireframe Homepage](https://raw.githubusercontent.com/Eduardo-Reis-dev/Portfolio/main/codigo/wireframes/home.png)
+![Wireframe Homepage](./codigo/wireframes/home.png)
 
 ### Projetos
 
-![Wireframe Projetos](https://raw.githubusercontent.com/Eduardo-Reis-dev/Portfolio/main/codigo/wireframes/projetos.png)
+![Wireframe Projetos](./codigo/wireframes/projetos.png)
 
 ### Contatos
 
-![Wireframe Contatos](https://raw.githubusercontent.com/Eduardo-Reis-dev/Portfolio/main/codigo/wireframes/contatos.png)
+![Wireframe Contatos](./codigo/wireframes/contatos.png)
 
 ### Experiência
 
-![Wireframe Experiência](https://raw.githubusercontent.com/Eduardo-Reis-dev/Portfolio/main/codigo/wireframes/experiencia.png)
+![Wireframe Experiência](./codigo/wireframes/experiencia.png)
 
 ### Sobre Mim
 
-![Wireframe Sobre Mim](https://raw.githubusercontent.com/Eduardo-Reis-dev/Portfolio/main/codigo/wireframes/sobre-mim.png)
+![Wireframe Sobre Mim](./codigo/wireframes/sobre-mim.png)
 
 ---
 
