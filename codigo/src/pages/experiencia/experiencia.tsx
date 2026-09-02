@@ -23,35 +23,6 @@ export function Experiencia() {
             </p>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="/projetos/giro/DashBoard.png"
-                alt="GIRO Dashboard"
-                width={500}
-                height={500}
-                className={imgClass}
-              />
-              <img
-                src="/projetos/giro/Relatorios.png"
-                alt="GIRO Relatórios"
-                width={500}
-                height={500}
-                className={imgClass}
-              />
-            </div>
-          </div>
-        ),
-      },
-      {
-        title: t("pages.experiencia.titulo2"),
-        content: (
-          <div>
-            <p className="text-neutral-200 text-xs md:text-sm font-normal mb-4">
-              {t("pages.experiencia.conteudo2_1")}
-            </p>
-            <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-              {t("pages.experiencia.conteudo2_2")}
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <img
                 src="/projetos/avila/Empreendimentos.png"
                 alt="Ávila Empreendimentos"
                 width={500}
@@ -70,14 +41,14 @@ export function Experiencia() {
         ),
       },
       {
-        title: t("pages.experiencia.titulo3"),
+        title: t("pages.experiencia.titulo2"),
         content: (
           <div>
             <p className="text-neutral-200 text-xs md:text-sm font-normal mb-4">
-              {t("pages.experiencia.conteudo3_1")}
+              {t("pages.experiencia.conteudo2_1")}
             </p>
             <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-              {t("pages.experiencia.conteudo3_2")}
+              {t("pages.experiencia.conteudo2_2")}
             </p>
             <div className="grid grid-cols-2 gap-4">
               <img
@@ -99,14 +70,14 @@ export function Experiencia() {
         ),
       },
       {
-        title: t("pages.experiencia.titulo4"),
+        title: t("pages.experiencia.titulo3"),
         content: (
           <div>
             <p className="text-neutral-200 text-xs md:text-sm font-normal mb-4">
-              {t("pages.experiencia.conteudo4_1")}
+              {t("pages.experiencia.conteudo3_1")}
             </p>
             <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
-              {t("pages.experiencia.conteudo4_2")}
+              {t("pages.experiencia.conteudo3_2")}
             </p>
             <div className="grid grid-cols-2 gap-4">
               <img
@@ -119,6 +90,35 @@ export function Experiencia() {
               <img
                 src="/projetos/acessibee/painelADMAcessibee.png"
                 alt="Acessibee Painel ADM"
+                width={500}
+                height={500}
+                className={imgClass}
+              />
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: t("pages.experiencia.titulo4"),
+        content: (
+          <div>
+            <p className="text-neutral-200 text-xs md:text-sm font-normal mb-4">
+              {t("pages.experiencia.conteudo4_1")}
+            </p>
+            <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+              {t("pages.experiencia.conteudo4_2")}
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src="/projetos/giro/DashBoard.png"
+                alt="GIRO Dashboard"
+                width={500}
+                height={500}
+                className={imgClass}
+              />
+              <img
+                src="/projetos/giro/Relatorios.png"
+                alt="GIRO Relatórios"
                 width={500}
                 height={500}
                 className={imgClass}

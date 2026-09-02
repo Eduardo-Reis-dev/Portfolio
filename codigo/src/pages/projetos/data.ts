@@ -25,7 +25,7 @@ const PROJECTS: ProjectStatic[] = [
   {
     id: "giro",
     title: "GIRO",
-    logo: "/projetos/giro/perfilGiro.png",
+    logo: "/projetos/giro/logoGiro.png",
     demo: "/projetos/giro/DashBoard.png",
     techStack: ["React", "TypeScript", "TailwindCSS", "Supabase", "PostgreSQL", "Node.js"],
     links: [
@@ -45,7 +45,7 @@ const PROJECTS: ProjectStatic[] = [
   {
     id: "avila-incorporadora",
     title: "Ávila Incorporadora",
-    logo: "/projetos/avila/InicioAvila.png",
+    logo: "/projetos/avila/icone ávila.png",
     demo: "/projetos/avila/Empreendimentos.png",
     techStack: ["React", "TypeScript", "TailwindCSS", "Framer Motion"],
     links: [
@@ -64,7 +64,7 @@ const PROJECTS: ProjectStatic[] = [
   {
     id: "aero-jr",
     title: "UFMG Aerospace / Aero Jr.",
-    logo: "/projetos/aero/inicioAero.png",
+    logo: "/projetos/aero/logo.png",
     demo: "/projetos/aero/Noticias.png",
     techStack: ["React", "TypeScript", "TailwindCSS", "Node.js"],
     links: [
@@ -81,7 +81,7 @@ const PROJECTS: ProjectStatic[] = [
   {
     id: "acessibee",
     title: "Acessibee",
-    logo: "/projetos/acessibee/inicioAcessiBee.png",
+    logo: "/projetos/acessibee/logo.png",
     demo: "/projetos/acessibee/Restaurante.png",
     techStack: ["React", "JavaScript", "TailwindCSS", "Acessibilidade Web (WCAG)"],
     links: [
