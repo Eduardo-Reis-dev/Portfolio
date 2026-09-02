@@ -30,7 +30,7 @@ const PROJECTS: ProjectStatic[] = [
     techStack: ["React", "TypeScript", "TailwindCSS", "Supabase", "PostgreSQL", "Node.js"],
     links: [
       { label: "GitHub", url: "https://github.com/Eduardo-Reis-dev" },
-      { label: "Live Demo", url: "https://appgiro.com.br" },
+      { label: "Live Demo", url: "https://appgiro.com.br/" },
     ],
     gallery: [
       "/projetos/giro/DashBoard.png",
@@ -50,7 +50,7 @@ const PROJECTS: ProjectStatic[] = [
     techStack: ["React", "TypeScript", "TailwindCSS", "Framer Motion"],
     links: [
       { label: "GitHub", url: "https://github.com/Eduardo-Reis-dev" },
-      { label: "Live Demo", url: "#" },
+      { label: "Live Demo", url: "https://www.avilainc.com.br/" },
     ],
     gallery: [
       "/projetos/avila/InicioAvila.png",
@@ -69,7 +69,7 @@ const PROJECTS: ProjectStatic[] = [
     techStack: ["React", "TypeScript", "TailwindCSS", "Node.js"],
     links: [
       { label: "GitHub", url: "https://github.com/Eduardo-Reis-dev" },
-      { label: "Live Demo", url: "#" },
+      { label: "Live Demo", url: "https://aeroespacial.eng.ufmg.br/" },
     ],
     gallery: [
       "/projetos/aero/inicioAero.png",
@@ -86,7 +86,7 @@ const PROJECTS: ProjectStatic[] = [
     techStack: ["React", "JavaScript", "TailwindCSS", "Acessibilidade Web (WCAG)"],
     links: [
       { label: "GitHub", url: "https://github.com/Eduardo-Reis-dev" },
-      { label: "Live Demo", url: "#" },
+      { label: "Live Demo", url: "https://acessibee.com.br/" },
     ],
     gallery: [
       "/projetos/acessibee/inicioAcessiBee.png",
