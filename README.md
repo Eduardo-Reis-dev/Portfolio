@@ -160,25 +160,23 @@ Para auxiliar no planejamento e desenvolvimento da aplicação, foram desenvolvi
 
 ### Homepage
 
-![Wireframe Homepage](./codigo/wireframes/home.png)
+![Wireframe Homepage](./wireframes/home.png)
 
 ### Projetos
 
-![Wireframe Projetos](./codigo/wireframes/projetos.png)
+![Wireframe Projetos](./wireframes/projetos.png)
 
 ### Contatos
 
-![Wireframe Contatos](./codigo/wireframes/contatos.png)
+![Wireframe Contatos](./wireframes/contatos.png)
 
 ### Experiência
 
-![Wireframe Experiência](./codigo/wireframes/experiencia.png)
+![Wireframe Experiência](./wireframes/experiencia.png)
 
 ### Sobre Mim
 
-![Wireframe Sobre Mim](./codigo/wireframes/sobre-mim.png)
-
----
+![Wireframe Sobre Mim](./wireframes/sobre-mim.png)
 
 ## 🎯 Objetivo do Projeto
 
