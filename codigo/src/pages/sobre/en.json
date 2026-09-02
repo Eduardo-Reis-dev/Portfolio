@@ -2,9 +2,9 @@
   "pages": {
     "sobreMim": {
       "titulo": "About Me",
-      "saudacao": "Hi, im",
-      "bio": "I'm a Software Engineer from Minas Gerais, with FullStack experience and a focus on Backend. I work with <strong>Java, SpringBoot</strong> and <strong>Docker</strong> for the server side and <strong>React, Typescript</strong> and other <strong>modern UI Frameworks</strong> for the client side",
-      "cta": "Check out my <1>Experience</1> to see my professional growth, or browse my skills applied in my <3>Projects</3>. If you'd like to get in touch, visit my <5>Contact</5> page"
+      "saudacao": "Hi, I'm",
+      "bio": "I'm a Software Engineering student and digital product builder based in Minas Gerais. With a strong blend of <strong>technical leadership, product strategy</strong>, and full-stack development, I build high-impact applications using <strong>React, TypeScript, Supabase</strong>, and intelligent <strong>workflow automations</strong>.",
+      "cta": "Check out my <1>Experience</1> to see my professional trajectory, or browse my work in <3>Projects</3>. If you'd like to talk business or collaborate, visit my <5>Contact</5> page"
     }
   }
 }
