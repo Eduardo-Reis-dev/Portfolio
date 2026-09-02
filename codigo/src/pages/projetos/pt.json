@@ -3,7 +3,7 @@
     "projetos": {
       "titulo": "Projetos",
       "sobre": "Sobre",
-      "contribuicao": "Como contribui para o projeto",
+      "contribuicao": "Como contribuí para o projeto",
       "stack": "Stack",
       "links": "Links",
       "galeria": "Galeria",
@@ -12,35 +12,45 @@
     }
   },
   "projects": {
-    "modus": {
-      "credit": "GERENCIAMENTO DE PROJETOS",
-      "description": "O Modus é um sistema de gestão de projetos arquitetônicos desenvolvido para escritórios que conduzem múltiplos projetos simultaneamente. Seu objetivo é centralizar e organizar as informações das atividades, respeitando a sequência metodológica do processo de elaboração arquitetônica.",
+    "giro": {
+      "credit": "PLATAFORMA DE GESTÃO FINANCEIRA",
+      "description": "O GIRO é um ecossistema de controle financeiro desenvolvido para microempreendedores e autônomos, centralizando entradas, gestão de assinaturas e automações financeiras através de fluxos web e mobile.",
       "contributions": [
-        "Desenvolvi um sistema de gerenciamento de projetos colaborando com uma equipe de mais 10 arquitetos para elicitar os requisitos do software, mapeando mais de 20 requisitos funcionais e 10 não funcionais",
-        "Viabilizei o acompanhamento visual de tarefas, centralizando a gestão dos dados para 10 arquitetos, ao construir a página principal do sistema em React.js e TypeScript com integração de uma biblioteca de gráfico Gantt.",
-        "Padronizei o ambiente de desenvolvimento entre os 7 desenvolvedores do time, eliminando inconsistências entre ambientes locais, estruturando os containers da aplicação com Docker"
+        "Liderei o roadmap de produto, modelo de negócios e estratégia de monetização com planos pagos e onboarding automatizado",
+        "Arquitetei a aplicação full-stack web e mobile utilizando React, Supabase, PostgreSQL e listeners de notificações",
+        "Desenvolvi pipelines de automação para inserção financeira via webhooks do WhatsApp e processamento em segundo plano"
       ],
-      "meta": ["FEV 2026 - AGOSTO 2026", "DURAÇÃO DE 7 MESES", "BELO HORIZONTE"]
+      "meta": ["MAI 2026 - ATUAL", "PRODUTO ATIVO", "BELO HORIZONTE"]
     },
-    "cras-digital": {
-      "credit": "AUTOMATIZAÇÃO DE PROCESSOS DO CRAS",
-      "description": "Um software voltado à digitalização e automação dos processos operacionais realizados nas unidades do Centro de Referência de Assistência Social (CRAS). O sistema foi projetado para substituir procedimentos manuais, antes executados por meio de formulários físicos e registros em papel, por fluxos digitais seguros, padronizados e acessíveis.",
+    "avila-incorporadora": {
+      "credit": "VITRINE E PAINEL ADMINISTRATIVO",
+      "description": "Plataforma imobiliária sob medida desenvolvida para a Ávila Incorporadora para apresentar empreendimentos, gerenciar listagens de imóveis e fornecer controle administrativo sobre leads e atualizações do catálogo.",
       "contributions": [
-        "Construí o sistema de mapeamento por projeção em tempo real",
-        "Implementei interatividade orientada por sensores",
-        "Otimizei o desempenho para exibição em larga escala"
+        "Arquitetei toda a experiência de frontend com foco em responsividade, identidade visual refinada e transições modernas",
+        "Construí painel administrativo modular em React, Tailwind CSS e Framer Motion para atualização ágil de imóveis",
+        "Estruturei páginas de vitrine de alta performance focadas em conversão de leads e entrega otimizada de mídias"
       ],
-      "meta": ["AGO 2025 - DEZ 2025", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"]
+      "meta": ["ABR 2026", "PROJETO COMERCIAL", "BELO HORIZONTE"]
     },
-    "rhsoft": {
-      "credit": "AUTOMATIZAÇÃO DE PROCESSOS DE RH",
-      "description": "O RHSoft é um sistema de Recursos Humanos desenvolvido com o objetivo de informatizar a gestão de recursos humanos em uma organização, centralizando dados de funcionários, automatizando cálculos da folha de pagamento e organizando a publicação de vagas de emprego.",
+    "aero-jr": {
+      "credit": "PORTAL INSTITUCIONAL E CMS",
+      "description": "Portal web oficial e gerenciador de conteúdo personalizado desenvolvido para o curso de Engenharia Aeroespacial da UFMG e Aero Jr., centralizando notícias acadêmicas, corpo docente e matriz curricular.",
       "contributions": [
-        "Direcionei a configuração de iluminação e fotografia",
-        "Desenvolvi pipelines personalizados de pós-processamento",
-        "Criei a galeria web da exposição"
+        "Desenvolvi módulos do dashboard administrativo (AdminNoticias e AdminSobreCurso) com suporte a preview em tempo real",
+        "Estruturei a hierarquia de componentes garantindo conformidade com a identidade visual da instituição",
+        "Integrei gerenciamento dinâmico de estado para publicação fluida de notícias e curadoria da grade curricular"
       ],
-      "meta": ["AGO 2025 - DEZ 2025", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"]
+      "meta": ["ABR 2026 - MAI 2026", "ACADÊMICO & COMUNITÁRIO", "BELO HORIZONTE"]
+    },
+    "acessibee": {
+      "credit": "INICIATIVA DE ACESSIBILIDADE DIGITAL",
+      "description": "Solução digital voltada para a eliminação de barreiras de comunicação e navegação para pessoas com deficiência em ambientes interativos da web.",
+      "contributions": [
+        "Coordenei o levantamento de requisitos com foco em normas WCAG, navegação por teclado e suporte a alto contraste",
+        "Implementei componentes React acessíveis com HTML semântico e ampla cobertura de atributos ARIA",
+        "Validei a usabilidade ponta a ponta garantindo compatibilidade com diferentes tecnologias assistivas"
+      ],
+      "meta": ["JAN 2026 - MAR 2026", "IMPACTO SOCIAL", "BELO HORIZONTE"]
     }
   }
 }
