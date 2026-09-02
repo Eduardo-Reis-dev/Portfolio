@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
         />
       </div>
       <h1 className="text-2xl md:text-4xl font-extrabold leading-tight tracking-tight font-geist drop-shadow-lg">
-        {t("pages.sobreMim.saudacao")} <strong>Joaquim</strong>
+        {t("pages.sobreMim.saudacao")} <strong>Eduardo Reis</strong>
       </h1>
       <p className="text-xl md:text-xl text-zinc-300 max-w-lg mx-auto font-inter font-normal">
         <Trans i18nKey="pages.sobreMim.bio" components={{ strong: <strong /> }} />
@@ -37,7 +37,12 @@ const HeroSection: React.FC = () => {
 };
 
 export const SobreMim = () => {
-  const arr = [Logos.tailwindcss, Logos.framer, Logos.nextjs, Logos.aws,]
+  const arr = [
+    Logos.tailwindcss,
+    Logos.framer,
+    Logos.nextjs,
+    Logos.aws,
+  ];
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-zinc-950 px-4 py-16 text-zinc-50 font-inter relative overflow-hidden">

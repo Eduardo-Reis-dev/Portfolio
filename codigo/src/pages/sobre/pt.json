@@ -2,9 +2,9 @@
   "pages": {
     "sobreMim": {
       "titulo": "Sobre Mim",
-      "saudacao": "Olá, eu sou o",
-      "bio": "Sou um Engenheiro de Software mineiro, com experiência FullStack e foco no Backend. Trabalho com <strong>Java, SpringBoot</strong> e <strong>Docker</strong> para o servidor da aplicação e <strong>React, Typescript</strong> e outros <strong>Frameworks de UI modernos</strong> para o cliente da aplicação",
-      "cta": "Acesse minhas <1>Experiências</1> para visualizar minha evolução como profissional, ou então veja minhas habilidades aplicadas nos meus <3>Projetos</3>. Se tiver interesse em falar comigo entre em <5>Contato</5>"
+      "saudacao": "Olá, eu sou",
+      "bio": "Sou estudante de Engenharia de Software e construtor de produtos digitais em Minas Gerais. Aliando <strong>liderança técnica, visão estratégica de produto</strong> e desenvolvimento full-stack, crio soluções de impacto utilizando <strong>React, TypeScript, Supabase</strong> e <strong>automações de fluxo</strong> inteligentes.",
+      "cta": "Confira minha <1>Experiência</1> para ver minha trajetória profissional, ou explore minhas entregas em <3>Projetos</3>. Se quiser conversar ou propor uma parceria, acesse minha página de <5>Contatos</5>"
     }
   }
 }
