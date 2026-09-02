@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "selecao": {
+      "titulo": "Quem é você?",
+      "descricao": "Escolha seu perfil para personalizar o portfólio"
+    }
+  },
+  "perfil": {
+    "recrutador": "Recrutador",
+    "visitante": "Visitante",
+    "professor": "Professor"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "selecao": {
+      "titulo": "Who's visiting?",
+      "descricao": "Pick a profile to personalize the portfolio"
+    }
+  },
+  "perfil": {
+    "recrutador": "Recruiter",
+    "visitante": "Visitor",
+    "professor": "Teacher"
+  }
+}

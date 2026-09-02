@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "projetos": {
+      "titulo": "Projetos",
+      "sobre": "Sobre",
+      "contribuicao": "Como contribui para o projeto",
+      "stack": "Stack",
+      "links": "Links",
+      "galeria": "Galeria",
+      "ampliarLogo": "Ampliar logo de {{titulo}}",
+      "logoAlt": "logo do {{titulo}}"
+    }
+  },
+  "projects": {
+    "modus": {
+      "credit": "GERENCIAMENTO DE PROJETOS",
+      "description": "O Modus é um sistema de gestão de projetos arquitetônicos desenvolvido para escritórios que conduzem múltiplos projetos simultaneamente. Seu objetivo é centralizar e organizar as informações das atividades, respeitando a sequência metodológica do processo de elaboração arquitetônica.",
+      "contributions": [
+        "Desenvolvi um sistema de gerenciamento de projetos colaborando com uma equipe de mais 10 arquitetos para elicitar os requisitos do software, mapeando mais de 20 requisitos funcionais e 10 não funcionais",
+        "Viabilizei o acompanhamento visual de tarefas, centralizando a gestão dos dados para 10 arquitetos, ao construir a página principal do sistema em React.js e TypeScript com integração de uma biblioteca de gráfico Gantt.",
+        "Padronizei o ambiente de desenvolvimento entre os 7 desenvolvedores do time, eliminando inconsistências entre ambientes locais, estruturando os containers da aplicação com Docker"
+      ],
+      "meta": ["FEV 2026 - AGOSTO 2026", "DURAÇÃO DE 7 MESES", "BELO HORIZONTE"]
+    },
+    "cras-digital": {
+      "credit": "AUTOMATIZAÇÃO DE PROCESSOS DO CRAS",
+      "description": "Um software voltado à digitalização e automação dos processos operacionais realizados nas unidades do Centro de Referência de Assistência Social (CRAS). O sistema foi projetado para substituir procedimentos manuais, antes executados por meio de formulários físicos e registros em papel, por fluxos digitais seguros, padronizados e acessíveis.",
+      "contributions": [
+        "Construí o sistema de mapeamento por projeção em tempo real",
+        "Implementei interatividade orientada por sensores",
+        "Otimizei o desempenho para exibição em larga escala"
+      ],
+      "meta": ["AGO 2025 - DEZ 2025", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"]
+    },
+    "rhsoft": {
+      "credit": "AUTOMATIZAÇÃO DE PROCESSOS DE RH",
+      "description": "O RHSoft é um sistema de Recursos Humanos desenvolvido com o objetivo de informatizar a gestão de recursos humanos em uma organização, centralizando dados de funcionários, automatizando cálculos da folha de pagamento e organizando a publicação de vagas de emprego.",
+      "contributions": [
+        "Direcionei a configuração de iluminação e fotografia",
+        "Desenvolvi pipelines personalizados de pós-processamento",
+        "Criei a galeria web da exposição"
+      ],
+      "meta": ["AGO 2025 - DEZ 2025", "DURAÇÃO DE 5 MESES", "BELO HORIZONTE"]
+    }
+  }
+}

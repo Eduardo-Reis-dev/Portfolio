@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "contatos": {
+      "titulo": "Contatos",
+      "heroTitle": "Me liga hein!",
+      "heroDesc": "Gostou do portfolio e quer entrar em contato? Acessa algumas das minhas redes ou me mande um email diretamente desta página",
+      "linkedin": "Linkedin",
+      "github": "GitHub",
+      "whatsapp": "Whatsapp",
+      "email": "Escreva um Email",
+      "formNomePlaceholder": "Seu nome",
+      "formNomeLabel": "Nome",
+      "formEmailPlaceholder": "Seu email",
+      "formEmailLabel": "Email",
+      "formAssuntoPlaceholder": "Assunto",
+      "formAssuntoLabel": "Assunto",
+      "formMensagemPlaceholder": "Escreva sua mensagem...",
+      "formMensagemLabel": "Mensagem",
+      "erroEnvio": "Não foi possível enviar o email.",
+      "erroConexao": "Erro de conexão ao enviar o email.",
+      "sucessoEnvio": "Email enviado com sucesso!",
+      "enviar": "Enviar"
+    }
+  }
+}

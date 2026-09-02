@@ -5,6 +5,7 @@ import {
   motion,
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 interface TimelineEntry {
   title: string;
@@ -12,6 +13,7 @@ interface TimelineEntry {
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+  const { t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -38,10 +40,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
-          Uma linha do tempo da minha trajetória até aqui
+          {t("pages.experiencia.cabecalho")}
         </h2>
         <p className="text-neutral-300 text-sm md:text-base max-w-sm">
-          Já fazem dois anos que inicie minha jornada para me tornar um Engenheiro de Software, tive diversas experiências e aprendi com todas elas. 
+          {t("pages.experiencia.intro")}
         </p>
       </div>
 

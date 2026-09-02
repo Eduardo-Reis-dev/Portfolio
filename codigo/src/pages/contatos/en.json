@@ -1,0 +1,25 @@
+{
+  "pages": {
+    "contatos": {
+      "titulo": "Contact",
+      "heroTitle": "Get in touch!",
+      "heroDesc": "Liked my portfolio and want to reach out? Check out my socials or send me an email directly from this page",
+      "linkedin": "Linkedin",
+      "github": "GitHub",
+      "whatsapp": "Whatsapp",
+      "email": "Send an Email",
+      "formNomePlaceholder": "Your name",
+      "formNomeLabel": "Name",
+      "formEmailPlaceholder": "Your email",
+      "formEmailLabel": "Email",
+      "formAssuntoPlaceholder": "Subject",
+      "formAssuntoLabel": "Subject",
+      "formMensagemPlaceholder": "Write your message...",
+      "formMensagemLabel": "Message",
+      "erroEnvio": "Failed to send the email.",
+      "erroConexao": "Connection error while sending the email.",
+      "sucessoEnvio": "Email sent successfully!",
+      "enviar": "Send"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "pages": {
+    "experiencia": {
+      "titulo": "Experience",
+      "cabecalho": "A timeline of my journey so far",
+      "intro": "It's been two years since I started my path to becoming a Software Engineer. I've had many experiences and learned something from each of them.",
+      "titulo1": "07/2026\n\"Governeance Hub\"",
+      "conteudo1": "SYSTEM STILL UNDER CONSTRUCTION...",
+      "titulo2": "04/2026\n\"Scientific Initiation\"",
+      "conteudo2_1": "Reviewed project-related research written in Technical English (B2) on educational games and HCI principles",
+      "conteudo2_2": "Conducted quantitative interviews with 10 elderly people to understand which HCI principles engage this sample group in educational games",
+      "conteudo2_3": "Submitted the project to the 34th PUC Minas Scientific, Technological and Innovation Initiation Seminar",
+      "titulo3": "02/2026\n\"MODUS\"",
+      "conteudo3_1": "Developed a project management system collaborating with a team of over 10 architects to elicit software requirements, mapping over 20 functional and 10 non-functional requirements",
+      "conteudo3_2": "Enabled visual task tracking, centralizing data management for 10 architects, by building the system's main page in React.js and TypeScript with a Gantt chart library integration.",
+      "conteudo3_3": "Standardized the development environment among the team's 7 developers, eliminating inconsistencies between local environments by structuring the application containers with Docker",
+      "conteudo3_4": "Standardized the development environment among the team's 7 developers, eliminating inconsistencies between local environments by structuring the application containers with Docker",
+      "titulo4": "02/2026\n\"Teaching Assistant\"",
+      "conteudo4_1": "Supported over 60 students throughout the semester with individual and group tutoring, reinforcing classroom content",
+      "conteudo4_2": "Led 12 review classes and hands-on workshops covering Java, Spring Boot, OOP and SOLID principles with an average of 10 students per session, reinforcing the most challenging topics",
+      "titulo5": "02/2026\nuntil Present\n\"RHSoft\"",
+      "conteudo5_1": "Developed a project management system collaborating with a team of over 10 architects to elicit software requirements, mapping over 20 functional and 10 non-functional requirements",
+      "conteudo5_2": "Enabled visual task tracking, centralizing data management for 10 architects, by building the system's main page in React.js and TypeScript with a Gantt chart library integration.",
+      "conteudo5_3": "Standardized the development environment among the team's 7 developers, eliminating inconsistencies between local environments by structuring the application containers with Docker",
+      "conteudo5_4": "Standardized the development environment among the team's 7 developers, eliminating inconsistencies between local environments by structuring the application containers with Docker",
+      "titulo6": "02/2026\n\"Cras Digital\"",
+      "conteudo6_1": "Developed a system to automate CRAS demands, mapping the institution's main processes and identifying bottlenecks to translate them into software requirements.",
+      "conteudo6_2": "Implemented the application's Backend with a robust Java and Spring Boot stack with MySQL for beneficiary data persistence and JUnit for automated tests",
+      "conteudo6_3": "Collaborated on the system's Frontend development using Vanilla Javascript with Modules and Tailwind to ensure good system usability",
+      "titulo7": "02/2025\n\"Start of Degree\"",
+      "conteudo7_1": "Started my Software Engineering degree."
+    }
+  }
+}

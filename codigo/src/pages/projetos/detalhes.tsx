@@ -1,13 +1,15 @@
 import { useState } from "react"
 import { useParams, Navigate } from "react-router-dom"
 import { ExternalLink } from "lucide-react"
+import { useTranslation } from "react-i18next"
 import { BackButton } from "@/components/back-button"
-import { getProjectById } from "./data"
+import { useProjectById } from "./data"
 import { Galeria, Lightbox } from "./galeria"
 
 export function ProjetoDetalhe() {
+  const { t } = useTranslation()
   const { id } = useParams<{ id: string }>()
-  const project = id ? getProjectById(id) : undefined
+  const project = useProjectById(id)
   const [logoAberta, setLogoAberta] = useState(false)
   const [videoAberta, setVideoAberta] = useState(false)
 
@@ -24,13 +26,13 @@ export function ProjetoDetalhe() {
         <header className="flex flex-col md:flex-row items-start gap-6">
           <button
             type="button"
-            aria-label={`Ampliar logo de ${project.title.replace("\n", " ")}`}
+            aria-label={t("pages.projetos.ampliarLogo", { titulo: project.title.replace("\n", " ") })}
             onClick={() => setLogoAberta(true)}
             className="cursor-zoom-in transition hover:opacity-80"
           >
             <img
               src={project.logo}
-              alt={`${project.title.replace("\n", " ")} logo`}
+              alt={t("pages.projetos.logoAlt", { titulo: project.title.replace("\n", " ") })}
               className="w-20 h-20 rounded-2xl object-cover border border-zinc-800"
             />
           </button>
@@ -68,7 +70,7 @@ export function ProjetoDetalhe() {
 
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-mono uppercase tracking-[0.14em] text-zinc-500">
-            Sobre
+            {t("pages.projetos.sobre")}
           </h2>
           <p className="text-lg text-zinc-300 leading-relaxed">
             {project.description}
@@ -77,7 +79,7 @@ export function ProjetoDetalhe() {
 
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-mono uppercase tracking-[0.14em] text-zinc-500">
-            Como contribui para o projeto
+            {t("pages.projetos.contribuicao")}
           </h2>
           <ul className="flex flex-col gap-2">
             {project.contributions.map((c) => (
@@ -91,7 +93,7 @@ export function ProjetoDetalhe() {
 
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-mono uppercase tracking-[0.14em] text-zinc-500">
-            Stack
+            {t("pages.projetos.stack")}
           </h2>
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
@@ -107,7 +109,7 @@ export function ProjetoDetalhe() {
 
         <section className="flex flex-col gap-3">
           <h2 className="text-sm font-mono uppercase tracking-[0.14em] text-zinc-500">
-            Links
+            {t("pages.projetos.links")}
           </h2>
           <div className="flex flex-wrap gap-3">
             {project.links.map((link) => (
@@ -128,7 +130,7 @@ export function ProjetoDetalhe() {
         {project.gallery.length > 0 && (
           <section className="flex flex-col gap-3">
             <h2 className="text-sm font-mono uppercase tracking-[0.14em] text-zinc-500">
-              Galeria
+              {t("pages.projetos.galeria")}
             </h2>
             <Galeria images={project.gallery} title={project.title} />
           </section>
@@ -137,7 +139,7 @@ export function ProjetoDetalhe() {
 
       <Lightbox
         src={project.logo}
-        alt={`${project.title.replace("\n", " ")} logo`}
+        alt={t("pages.projetos.logoAlt", { titulo: project.title.replace("\n", " ") })}
         open={logoAberta}
         onClose={() => setLogoAberta(false)}
         media="image"

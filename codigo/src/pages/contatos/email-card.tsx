@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Send, Loader2, CheckCircle2, XCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { sendEmail } from '@/services/email-service';
 
 interface EmailClientCardProps {
@@ -13,6 +14,7 @@ const inputClass =
 
 const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
   ({ className, onSent }, ref) => {
+    const { t } = useTranslation();
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
     const [subject, setSubject] = React.useState('');
@@ -48,7 +50,7 @@ const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
 
       setStatus('loading');
       setError('');
-      const result = await sendEmail({ name, email, subject, message });
+      const result = await sendEmail({ name, email, subject, message }, t);
 
       if (result.success) {
         setStatus('success');
@@ -59,7 +61,7 @@ const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
         onSent?.();
       } else {
         setStatus('error');
-        setError(result.message || 'Não foi possível enviar o email.');
+        setError(result.message || t('pages.contatos.erroEnvio'));
       }
     };
 
@@ -85,24 +87,24 @@ const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
           <div className="flex-grow flex flex-col gap-3">
             <input
               type="text"
-              placeholder="Seu nome"
-              aria-label="Nome"
+              placeholder={t('pages.contatos.formNomePlaceholder')}
+              aria-label={t('pages.contatos.formNomeLabel')}
               value={name}
               onChange={(e) => setName(e.target.value)}
               className={inputClass}
             />
             <input
               type="email"
-              placeholder="Seu email"
-              aria-label="Email"
+              placeholder={t('pages.contatos.formEmailPlaceholder')}
+              aria-label={t('pages.contatos.formEmailLabel')}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className={inputClass}
             />
             <input
               type="text"
-              placeholder="Assunto"
-              aria-label="Assunto"
+              placeholder={t('pages.contatos.formAssuntoPlaceholder')}
+              aria-label={t('pages.contatos.formAssuntoLabel')}
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
               className={inputClass}
@@ -116,8 +118,8 @@ const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
           variants={itemVariants}
         >
           <textarea
-            placeholder="Escreva sua mensagem..."
-            aria-label="Mensagem"
+            placeholder={t('pages.contatos.formMensagemPlaceholder')}
+            aria-label={t('pages.contatos.formMensagemLabel')}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={6}
@@ -134,7 +136,7 @@ const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
             <div className="flex-1 text-sm">
               {status === 'success' && (
                 <p className="flex items-center gap-2 text-emerald-500">
-                  <CheckCircle2 className="h-4 w-4" /> Email enviado com sucesso!
+                  <CheckCircle2 className="h-4 w-4" /> {t('pages.contatos.sucessoEnvio')}
                 </p>
               )}
               {status === 'error' && (
@@ -154,7 +156,7 @@ const EmailClientCard = React.forwardRef<HTMLDivElement, EmailClientCardProps>(
               ) : (
                 <Send className="h-4 w-4" />
               )}
-              Enviar
+              {t('pages.contatos.enviar')}
             </button>
           </div>
         </motion.div>

@@ -1,21 +1,27 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { BackButton } from "@/components/back-button"
 import { CoverflowCarousel, type CoverflowSlide } from "./carrosel"
-import { PROJECTS } from "./data"
-
-const SLIDES: CoverflowSlide[] = PROJECTS.map((p) => ({
-  src: p.logo,
-  alt: p.title.replace("\n", " "),
-  title: p.title,
-  subtitle: p.credit,
-  meta: p.meta?.map((m) => ({ label: "", value: m })),
-}))
+import { useProjects } from "./data"
 
 export function Projetos() {
   const navigate = useNavigate()
   const [activeIndex, setActiveIndex] = useState(0)
-  const active = SLIDES[activeIndex]
+  const projects = useProjects()
+
+  const slides = useMemo<CoverflowSlide[]>(
+    () =>
+      projects.map((p) => ({
+        src: p.logo,
+        alt: p.title.replace("\n", " "),
+        title: p.title,
+        subtitle: p.credit,
+        meta: p.meta?.map((m) => ({ label: "", value: m })),
+      })),
+    [projects],
+  )
+
+  const active = slides[activeIndex]
 
   return (
     <div className="relative min-h-screen w-full flex items-center bg-zinc-950 overflow-hidden">
@@ -34,11 +40,11 @@ export function Projetos() {
           </div>
         )}
         <CoverflowCarousel
-          slides={SLIDES}
+          slides={slides}
           showCaption
           showNavigation
           onActiveChange={setActiveIndex}
-          onSlideClick={(i) => navigate(`/projetos/${PROJECTS[i].id}`)}
+          onSlideClick={(i) => navigate(`/projetos/${projects[i].id}`)}
         />
       </div>
     </div>

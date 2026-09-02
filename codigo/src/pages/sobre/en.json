@@ -1,0 +1,10 @@
+{
+  "pages": {
+    "sobreMim": {
+      "titulo": "About Me",
+      "saudacao": "Hi, im",
+      "bio": "I'm a Software Engineer from Minas Gerais, with FullStack experience and a focus on Backend. I work with <strong>Java, SpringBoot</strong> and <strong>Docker</strong> for the server side and <strong>React, Typescript</strong> and other <strong>modern UI Frameworks</strong> for the client side",
+      "cta": "Check out my <1>Experience</1> to see my professional growth, or browse my skills applied in my <3>Projects</3>. If you'd like to get in touch, visit my <5>Contact</5> page"
+    }
+  }
+}

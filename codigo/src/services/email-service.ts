@@ -13,7 +13,10 @@ export interface EmailResult {
 const ACCESS_KEY = "776453b9-0628-4908-aa1a-cda96b3a7f62"
 const WEB3FORMS_URL = "https://api.web3forms.com/submit"
 
-export async function sendEmail(payload: EmailPayload): Promise<EmailResult> {
+export async function sendEmail(
+  payload: EmailPayload,
+  t: (key: string) => string,
+): Promise<EmailResult> {
   const formData = new FormData()
   formData.append("access_key", ACCESS_KEY)
   formData.append("name", payload.name)
@@ -29,7 +32,7 @@ export async function sendEmail(payload: EmailPayload): Promise<EmailResult> {
       body: formData,
     })
   } catch {
-    return { success: false, message: "Erro de conexão ao enviar o email." }
+    return { success: false, message: t("pages.contatos.erroConexao") }
   }
 
   const data = await response.json().catch(() => null)

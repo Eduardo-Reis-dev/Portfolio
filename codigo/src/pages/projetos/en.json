@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "projetos": {
+      "titulo": "Projects",
+      "sobre": "About",
+      "contribuicao": "How I contributed to the project",
+      "stack": "Stack",
+      "links": "Links",
+      "galeria": "Gallery",
+      "ampliarLogo": "Enlarge {{titulo}} logo",
+      "logoAlt": "{{titulo}} logo"
+    }
+  },
+  "projects": {
+    "modus": {
+      "credit": "PROJECT MANAGEMENT",
+      "description": "Modus is an architectural project management system developed for offices that run multiple projects simultaneously. Its goal is to centralize and organize activity information, respecting the methodological sequence of the architectural design process.",
+      "contributions": [
+        "Developed a project management system collaborating with a team of over 10 architects to elicit software requirements, mapping over 20 functional and 10 non-functional requirements",
+        "Enabled visual task tracking, centralizing data management for 10 architects, by building the system's main page in React.js and TypeScript with a Gantt chart library integration.",
+        "Standardized the development environment among the team's 7 developers, eliminating inconsistencies between local environments by structuring the application containers with Docker"
+      ],
+      "meta": ["FEB 2026 - AUGUST 2026", "DURATION OF 7 MONTHS", "BELO HORIZONTE"]
+    },
+    "cras-digital": {
+      "credit": "CRAS PROCESS AUTOMATION",
+      "description": "Software aimed at digitizing and automating the operational processes carried out in the units of the Social Assistance Reference Center (CRAS). The system was designed to replace manual procedures, previously carried out through physical forms and paper records, with secure, standardized and accessible digital workflows.",
+      "contributions": [
+        "Built the real-time projection mapping system",
+        "Implemented sensor-driven interactivity",
+        "Optimized performance for large-scale display"
+      ],
+      "meta": ["AUG 2025 - DEC 2025", "DURATION OF 5 MONTHS", "BELO HORIZONTE"]
+    },
+    "rhsoft": {
+      "credit": "HR PROCESS AUTOMATION",
+      "description": "RHSoft is a Human Resources system developed with the aim of computerizing HR management in an organization, centralizing employee data, automating payroll calculations and organizing the posting of job vacancies.",
+      "contributions": [
+        "Directed the lighting setup and photography",
+        "Developed custom post-processing pipelines",
+        "Created the exhibition web gallery"
+      ],
+      "meta": ["AUG 2025 - DEC 2025", "DURATION OF 5 MONTHS", "BELO HORIZONTE"]
+    }
+  }
+}
