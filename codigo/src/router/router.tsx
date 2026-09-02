@@ -1,6 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { Homepage } from '../pages/homepage/homepage'
-import { SelecaoPerfil } from '../pages/selecao/selecao'
 import { Projetos } from '../pages/projetos/projetos'
 import { ProjetoDetalhe } from '../pages/projetos/detalhes'
 import { Experiencia } from '../pages/experiencia/experiencia'
@@ -11,10 +10,6 @@ import { NaoEncontrada } from '../pages/nao-encontrada/nao-encontrada'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <SelecaoPerfil />,
-  },
-  {
-    path: '/inicio',
     element: <Homepage />,
   },
   {
